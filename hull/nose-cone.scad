@@ -15,7 +15,6 @@ shock_cord_mount_slope_h = 0;
 shock_cord_mount_thickness = 2 * sleeve_thickness;
 
 nose_cone_mount_screws = 4;
-nose_cone_mount_screw_angle = 360 / nose_cone_mount_screws;
 nose_cone_mount_screw_dia = 3;
 nose_cone_mount_screw_size = str("M", nose_cone_mount_screw_dia);
 nose_cone_mount_screw_mount_edge = 10;
@@ -38,28 +37,24 @@ module nose_cone_mount () {
     union () {
       nose_cone_mount_hull();
 
-      for (i = [1 : nose_cone_mount_screws]) {
-        rotate([0, 0, i * nose_cone_mount_screw_angle]) {
-          translate([(outer_d - sleeve_thickness) / 2, 0, 0]) {
-            difference () {
-              translate([-nose_cone_mount_screw_mount_edge, -nose_cone_mount_screw_mount_edge / 2, 0])
-                cube([nose_cone_mount_screw_mount_edge, nose_cone_mount_screw_mount_edge, nose_cone_mount_screw_mount_edge]);
+      radial_cluster(nose_cone_mount_screws) {
+        translate([(outer_d - sleeve_thickness) / 2, 0, 0]) {
+          difference () {
+            translate([-nose_cone_mount_screw_mount_edge, -nose_cone_mount_screw_mount_edge / 2, 0])
+              cube([nose_cone_mount_screw_mount_edge, nose_cone_mount_screw_mount_edge, nose_cone_mount_screw_mount_edge]);
 
-              translate([0, 0, nose_cone_mount_screw_offset])
-              rotate([0, 90, 0])
-                nutcatch_sidecut(nose_cone_mount_screw_size);
-            }
+            translate([0, 0, nose_cone_mount_screw_offset])
+            rotate([0, 90, 0])
+              nutcatch_sidecut(nose_cone_mount_screw_size);
           }
         }
       }
     }
 
-    for (i = [1 : nose_cone_mount_screws]) {
-      rotate([0, 0, i * nose_cone_mount_screw_angle]) {
-        translate([outer_d / 2, 0, nose_cone_mount_screw_offset]) {
-          rotate([0, 90, 0])
-            hole_through(name = nose_cone_mount_screw_size, l=10);
-        }
+    radial_cluster(nose_cone_mount_screws) {
+      translate([outer_d / 2, 0, nose_cone_mount_screw_offset]) {
+        rotate([0, 90, 0])
+          hole_through(name = nose_cone_mount_screw_size, l=10);
       }
     }
   }
@@ -102,5 +97,5 @@ module nose_cone () {
   }
 }
 
-// nose_cone_mount();
-nose_cone();
+nose_cone_mount();
+// nose_cone();

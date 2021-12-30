@@ -12,3 +12,18 @@ module internal_mount (length, height, slope, thickness) {
   }
 }
 
+module radial_cluster (count) {
+  angle = 360 / count;
+  for (i = [1 : angle]) {
+    rotate([0, 0, i * angle]) {
+      children();
+    }
+  }
+}
+
+module sleeve(h, inner_d, thickness) {
+  difference () {
+    cylinder(h = h, d = inner_d + thickness);
+    cylinder(h = h, d = inner_d);
+  }
+}
