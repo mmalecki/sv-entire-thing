@@ -6,7 +6,7 @@ hull_h = 200;
 
 sleeve_thickness = 3;
 
-engine_mount_h = 50;
+engine_mount_h = 45;
 engine_mount_sleeve_thickness = 5;
 
 stabilizers = 4;
