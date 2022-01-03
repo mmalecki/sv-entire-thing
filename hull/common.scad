@@ -20,10 +20,3 @@ module radial_cluster (count) {
     }
   }
 }
-
-module sleeve(h, inner_d, thickness) {
-  difference () {
-    cylinder(h = h, d = inner_d + thickness);
-    cylinder(h = h, d = inner_d);
-  }
-}

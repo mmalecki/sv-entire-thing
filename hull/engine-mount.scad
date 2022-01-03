@@ -1,5 +1,6 @@
 include <parameters.scad>
 include <common.scad>
+include <rocketscad/utils.scad>
 
 base_thickness = 5;
 stabilizer_h = 70;
@@ -31,7 +32,7 @@ module stabilizer () {
 }
 
 module guide_attachment () {
-  sleeve(guide_h, guide_d, sleeve_thickness);
+  cylinder_sleeve(guide_h, guide_d, sleeve_thickness);
 }
 
 module engine_mount () {
@@ -47,9 +48,9 @@ module engine_mount () {
     }
   }
 
-  sleeve(engine_mount_h, engine_d, engine_mount_sleeve_thickness);
+  cylinder_sleeve(engine_mount_h, engine_d, engine_mount_sleeve_thickness);
 
-  sleeve(hull_h, outer_d, sleeve_thickness);
+  cylinder_sleeve(hull_h, outer_d, sleeve_thickness);
 
   radial_cluster(internal_mounts) {
     translate([(outer_d / 2) , -internal_mount_h / 2, internal_mount_offset])
