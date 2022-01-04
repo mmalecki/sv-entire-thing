@@ -1,7 +1,7 @@
-include <parameters.scad>
-include <rocketscade/utils.scad>
-include <rocketscade/tube-coupler.scad>
-include <rocketscade/mounts.scad>
+include <parameters.scad>;
+include <rocketscade/utils.scad>;
+include <rocketscade/tube-coupler.scad>;
+include <rocketscade/mounts.scad>;
 
 module internal_mounts () {
   radial_cluster(engine_mount_internal_mount_count) {
