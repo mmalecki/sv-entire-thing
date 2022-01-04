@@ -47,3 +47,5 @@ fin_mount_offset = engine_mount_outer_h + sleeve_thickness;
 fin_mount_h = fin_root_chord - fin_mount_offset + fin_fillet_r;
 
 body_tube_h = 200 - (fin_mount_h + engine_mount_outer_h + 2 * sleeve_thickness);
+
+nose_cone_h = 100;
