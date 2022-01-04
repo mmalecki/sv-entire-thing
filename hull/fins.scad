@@ -22,7 +22,7 @@ module fins () {
   difference () {
     radial_cluster(fin_count) {
       translate([(outer_d / 2) - fin_fillet_r, 0, 0])
-        render() fin(fin_root_chord, fin_height, fin_sweep_length, fin_tip_chord, fin_fillet_r);
+        fin(fin_root_chord, fin_height, fin_sweep_length, fin_tip_chord, fin_fillet_r);
     }
     translate([0, 0, -fin_fillet_r])
       cylinder(h = fin_mount_offset + fin_fillet_r, d = outer_d);
