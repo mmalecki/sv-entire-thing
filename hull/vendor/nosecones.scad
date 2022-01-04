@@ -356,18 +356,3 @@ union(){
     }
 }
 }
-
-// EXAMPLES:
-// translate([0, 0]) cone_cone(R = 5, L = 10, s = 500);
-// translate([20, 0]) cone_blunted(R = 5, R_nose = 2, L = 15, s = 500);
-// translate([40, 0]) cone_parabolic(R = 5, L = 10, K = 0.5, s = 500);
-// translate([-10, 20]) cone_haack(C = 0, R = 5, L = 10, s = 500);
-// translate([10, 20]) cone_power_series(n = 0.5, R = 5, L = 10, s = 500);
-// translate([30, 20]) cone_elliptical(n = 0.5, R = 5, L = 10, s = 500);
-difference () {
-    cone_ogive_sec(rho = 16, R = 4, L = 10, s = 500);
-    cone_ogive_sec(rho = 16, R = 3, L = 9, s = 500);
-}
-// translate([0, 40]) cone_ogive_tan(R = 5, L = 10, s = 500);
-// translate([20, 40]) cone_ogive_tan_blunted(R_nose = 2, R = 5, L = 10, s = 500);
-// translate([40, 40]) cone_biconic(R = 5, R_nose = 3, L1 = 6, L2 = 4, s = 500);
