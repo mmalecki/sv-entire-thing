@@ -31,9 +31,11 @@ module guide_attachment () {
 
 module engine_mount () {
   // The base, which connects all the components..
-  difference () {
-    cylinder(h = engine_mount_base_thickness, d = inner_d);
-    cylinder(h = engine_mount_base_thickness, d = engine_d);
+  linear_extrude (engine_mount_base_thickness) {
+    difference () {
+      circle(d = inner_d);
+      circle(d = engine_d);
+    }
   }
 
   difference () {
