@@ -1,4 +1,4 @@
-$fn = 50;
+$fn = 30;
 
 fit_padding = 1.01;
 
@@ -26,7 +26,7 @@ engine_mount_outer_h = 20;
 engine_d_fit_padding = 1.01325;
 engine_d = 18 * engine_d_fit_padding;
 
-engine_mount_internal_mount_count = 3;
+engine_mount_internal_mount_count = 1;
 engine_mount_internal_mount_length = 20;
 engine_mount_internal_mount_height = 4.5;
 engine_mount_internal_mount_slope0 = 0;
@@ -49,3 +49,5 @@ fin_mount_h = fin_root_chord - fin_mount_offset + fin_fillet_r;
 body_tube_h = 200 - (fin_mount_h + engine_mount_outer_h + 2 * sleeve_thickness);
 
 nose_cone_h = 100;
+nose_cone_mount_mount_length = 20;
+nose_cone_mount_mount_height = 20;
