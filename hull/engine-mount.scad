@@ -4,19 +4,15 @@ include <rocketscade/tube-coupler.scad>;
 include <rocketscade/mounts.scad>;
 
 module internal_mounts () {
-  translate([0, 0, engine_mount_h]) {
-    radial_cluster(engine_mount_internal_mount_count) {
-      translate([(engine_d + engine_mount_sleeve_thickness) / 2, engine_mount_internal_mount_height / 2, 0]) {
-        rotate([0, 90, 270]) {
-          internal_mount(
-            engine_mount_internal_mount_length,
-            engine_mount_internal_mount_height,
-            engine_mount_internal_mount_slope0,
-            engine_mount_internal_mount_slope1,
-            engine_mount_internal_mount_thickness
-          );
-        }
-      }
+  translate([(engine_d + engine_mount_sleeve_thickness) / 2, engine_mount_internal_mount_height / 2, engine_mount_h]) {
+    rotate([0, 90, 270]) {
+      internal_mount(
+        engine_mount_internal_mount_length,
+        engine_mount_internal_mount_height,
+        engine_mount_internal_mount_slope0,
+        engine_mount_internal_mount_slope1,
+        engine_mount_internal_mount_thickness
+      );
     }
   }
 }
