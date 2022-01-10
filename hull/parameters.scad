@@ -13,8 +13,8 @@ inner_d = outer_d - 2 * sleeve_thickness;
 fit_inner_d = inner_d / fit_padding;
 
 coupler_screw_dia = 3;
-coupler_h = 5;
-coupler_screw_offset = coupler_h / 2;
+coupler_h = 6;
+coupler_screw_offset = 1.6;
 coupler_screw_count = 3;
 screw_mount_width = 8;
 screw_mount_depth = 4;
