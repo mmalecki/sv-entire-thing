@@ -9,10 +9,10 @@ module fins () {
       cylinder_sleeve(fin_mount_h, inner_d, sleeve_thickness);
 
       rotate([0, 0, 45]) {
-        translate([0, 0, coupler_screw_offset])
+        translate([0, 0, screw_offset])
           hole_through_radial_cluster(outer_d / 2, 3, coupler_screw_dia, screw_mount_depth);
 
-        translate([0, 0, fin_mount_h - coupler_screw_offset])
+        translate([0, 0, fin_mount_h - screw_offset])
           hole_through_radial_cluster(outer_d / 2, 3, coupler_screw_dia, screw_mount_depth);
       }
     }
