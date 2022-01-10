@@ -53,3 +53,4 @@ body_tube_h = 200 - (fin_mount_h + engine_mount_outer_h + 2 * sleeve_thickness);
 nose_cone_h = 100;
 nose_cone_mount_mount_length = 20;
 nose_cone_mount_mount_height = 20;
+nose_cone_base_h = coupler_h;
