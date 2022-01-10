@@ -19,6 +19,8 @@ coupler_screw_count = 3;
 screw_mount_width = 7;
 screw_mount_depth = 4;
 
+screw_offset = coupler_screw_offset + coupler_screw_dia / 2;
+
 engine_mount_base_thickness = 4;
 engine_mount_sleeve_thickness = 1.6;
 engine_mount_h = 40;
