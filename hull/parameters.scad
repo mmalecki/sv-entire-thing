@@ -1,4 +1,4 @@
-$fn = 30;
+$fn = 50;
 
 fit_padding = 1.01;
 
