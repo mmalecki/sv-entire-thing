@@ -10,7 +10,7 @@ module coupler () {
       h2 = coupler_h,
       h_stopper = sleeve_thickness,
       screw_dia = coupler_screw_dia,
-      nutcatch_offset = screw_mount_depth / 4,
+      nutcatch_offset = screw_mount_nutcatch_offset,
       screw_offset = coupler_screw_offset,
       screw_mount_width = screw_mount_width,
       screw_mount_depth = screw_mount_depth,

@@ -18,6 +18,7 @@ coupler_screw_offset = 1.6;
 coupler_screw_count = 3;
 screw_mount_width = 8;
 screw_mount_depth = 4;
+screw_mount_nutcatch_offset = 0.5;
 
 screw_offset = coupler_screw_offset + coupler_screw_dia / 2;
 
