@@ -29,12 +29,10 @@ engine_mount_outer_h = 20;
 engine_d_fit_padding = 1.01325;
 engine_d = 18 * engine_d_fit_padding;
 
-engine_mount_internal_mount_count = 1;
-engine_mount_internal_mount_length = 20;
-engine_mount_internal_mount_height = 4.5;
-engine_mount_internal_mount_slope0 = 0;
-engine_mount_internal_mount_slope1 = 10;
-engine_mount_internal_mount_thickness = 1.2;
+engine_mount_internal_mount_count = 3;
+engine_mount_internal_mount_inset = engine_mount_sleeve_thickness / 6;
+engine_mount_internal_mount_height = 6;
+engine_mount_internal_mount_thickness = 8;
 
 guide_padding = 1.15;
 guide_d = 10 * guide_padding;

@@ -1,20 +1,26 @@
 include <parameters.scad>;
 include <rocketscade/utils.scad>;
 include <rocketscade/tube-coupler.scad>;
-include <rocketscade/mounts.scad>;
 
-module internal_mounts () {
-  translate([(engine_d + engine_mount_sleeve_thickness) / 2, engine_mount_internal_mount_height / 2, engine_mount_h]) {
-    rotate([0, 90, 270]) {
-      internal_mount(
-        engine_mount_internal_mount_length,
-        engine_mount_internal_mount_height,
-        engine_mount_internal_mount_slope0,
-        engine_mount_internal_mount_slope1,
-        engine_mount_internal_mount_thickness
-      );
+module supporting_mount () {
+
+  translate([engine_d / 2 + engine_mount_sleeve_thickness, engine_mount_internal_mount_height / 2, 0]) {
+    rotate([90, 0, 0]) {
+      linear_extrude(engine_mount_internal_mount_height, $fn = 1, convexity = 1)
+        polygon(
+          points = [
+            [-engine_mount_internal_mount_inset, engine_mount_h], 
+            [-engine_mount_internal_mount_inset, engine_mount_h - engine_mount_internal_mount_thickness],
+            [(inner_d - engine_d) / 2 - 2 * sleeve_thickness, 0],
+            [(inner_d - engine_d) / 2 - sleeve_thickness, 0],
+          ]
+        );
     }
   }
+}
+
+module internal_mounts () {
+  radial_cluster(engine_mount_internal_mount_count) supporting_mount();
 }
 
 module guide_attachment () {
@@ -49,7 +55,7 @@ module engine_mount () {
 
     // Allow the holes to reach the engine, both for some runaway screw lengths,
     // as well as optionally holding the motor in place.
-    translate([0, 0, engine_mount_outer_h - coupler_screw_offset])
+    translate([0, 0, engine_mount_outer_h - screw_offset])
       rotate([0, 0, 45])
         hole_through_radial_cluster(outer_d / 2, 3, coupler_screw_dia, inner_d / 2);
   }
