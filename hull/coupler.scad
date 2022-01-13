@@ -2,7 +2,7 @@ include <parameters.scad>;
 include <rocketscade/tube-coupler.scad>;
 
 module coupler () {
-  rotate([0, 0, 45])
+  rotate([0, 0, screw_angle_offset])
     tube_coupler(
       d1 = fit_inner_d - 2 * sleeve_thickness,
       d2 = fit_inner_d - 2 * sleeve_thickness,

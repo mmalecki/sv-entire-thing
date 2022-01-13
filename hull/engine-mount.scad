@@ -56,11 +56,11 @@ module engine_mount () {
     // Allow the holes to reach the engine, both for some runaway screw lengths,
     // as well as optionally holding the motor in place.
     translate([0, 0, engine_mount_outer_h - screw_offset])
-      rotate([0, 0, 45])
+      rotate([0, 0, screw_angle_offset])
         hole_through_radial_cluster(outer_d / 2, 3, coupler_screw_dia, inner_d / 2);
   }
 
-  rotate([0, 0, 90]) guide_attachment();
+  rotate([0, 0, screw_angle_offset + (360 / coupler_screw_count) / 2]) guide_attachment();
 
   internal_mounts();
 }
