@@ -1,6 +1,6 @@
 $fn = 50;
 
-fit_padding = 1.01;
+fit = 0.25;
 
 // The outer diameter of the hull
 outer_d = 37;
@@ -10,7 +10,7 @@ sleeve_thickness = 1.6;
 
 // Calculate the inner diameter of the hull
 inner_d = outer_d - 2 * sleeve_thickness;
-fit_inner_d = inner_d / fit_padding;
+fit_inner_d = inner_d - fit;
 
 coupler_screw_dia = 3;
 coupler_h = 6;
@@ -27,8 +27,8 @@ engine_mount_base_thickness = 4;
 engine_mount_sleeve_thickness = 1.6;
 engine_mount_h = 40;
 engine_mount_outer_h = 20;
-engine_d_fit_padding = 1.01325;
-engine_d = 18 * engine_d_fit_padding;
+engine_d_fit = fit;
+engine_d = 18 + engine_d_fit;
 
 engine_mount_internal_mount_count = 3;
 engine_mount_internal_mount_inset = engine_mount_sleeve_thickness / 6;
