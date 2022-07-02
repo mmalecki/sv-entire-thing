@@ -44,7 +44,7 @@ fin_root_chord = 50;
 fin_height = 70;
 fin_sweep_length = 70;
 fin_tip_chord = 0;
-fin_fillet_r = 0.8;
+fin_fillet_r = 1;
 fin_mount_offset = engine_mount_outer_h + sleeve_thickness;
 fin_mount_h = fin_root_chord - fin_mount_offset + fin_fillet_r;
 
