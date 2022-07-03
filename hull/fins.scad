@@ -21,7 +21,7 @@ module fins () {
   // This is ugly: cut out parts of the fin using a hull-sized cylinder.
   difference () {
     radial_cluster(fin_count) {
-      translate([(outer_d / 2) - fin_fillet_r, 0, 0])
+      translate([outer_d / 2, 0, 0])
         fin(fin_root_chord, fin_height, fin_sweep_length, fin_tip_chord, fin_fillet_r);
     }
     translate([0, 0, -fin_fillet_r])
