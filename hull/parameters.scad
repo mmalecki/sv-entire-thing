@@ -21,7 +21,6 @@ screw_mount_depth = 4;
 screw_mount_nutcatch_offset = 0.5;
 
 screw_offset = coupler_screw_offset + coupler_screw_dia / 2;
-screw_angle_offset = 45;
 
 engine_mount_base_thickness = 4;
 engine_mount_sleeve_thickness = 1.6;
@@ -54,3 +53,5 @@ nose_cone_h = 100;
 nose_cone_mount_mount_length = 20;
 nose_cone_mount_mount_height = 20;
 nose_cone_base_h = coupler_h;
+
+screw_angle_offset = (360 / fin_count) / 2;
