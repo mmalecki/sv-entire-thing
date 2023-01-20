@@ -1,3 +1,3 @@
-[submodule "hull/nutsnbolts"]
-	path = hull/nutsnbolts
-	url = https://github.com/JohK/nutsnbolts.git
+[submodule "hull/catchnhole"]
+	path = hull/catchnhole
+	url = https://github.com/mmalecki/catchnhole
